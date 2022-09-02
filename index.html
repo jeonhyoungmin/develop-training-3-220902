@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module" src="/script/main.js" defer></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow-x:hidden;
+    }
+    #root {
+      width: 100vw;
+      height: 130vh;
+    }
+    
+    #root > header {
+      width: 100vw;
+      height: 80px;
+      background-color: aqua;
+      position: fixed;
+      z-index: 1;
+    }
+
+    #root > div {
+      width: 100vw;
+      height: 130vh;
+      background-color: yellowgreen;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    
+    #root > div > main {
+      width: 60vw;
+      height: 80vh;
+      background-color: blue;
+      position: relative;
+      right: 25vw;
+    }
+
+    #root > div > article {
+      width: 10vw;
+      height: 80vh;
+      background-color: cadetblue;
+      position: fixed;
+      bottom: 5vh;
+      right: 5vw;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <header></header>
+    <div>
+      <main></main>
+      <article></article>
+    </div>
+  </div>
+
+
+
+  <script>
+    
+  </script>
+</body>
+</html>
