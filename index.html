@@ -5,9 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script type="module" src="/script/main.js" defer></script>
+  <script type="module" src="./script/main.js" defer></script>
   <style>
-    body {
+    /* body {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -24,6 +24,8 @@
       background-color: aqua;
       position: fixed;
       z-index: 1;
+      display: flex;
+      align-items: flex-end;
     }
 
     #root > div {
@@ -44,28 +46,161 @@
     }
 
     #root > div > article {
-      width: 10vw;
+      width: 15vw;
       height: 80vh;
       background-color: cadetblue;
       position: fixed;
       bottom: 5vh;
-      right: 5vw;
+      right: 8vw;
+      display: flex;
     }
-  </style>
+
+    #root > header > nav {
+      width: 80vw;
+      height: 50px;
+      background-color: grey;
+      position: relative;
+      left: 3vw;
+      display: flex;
+      justify-content: center;
+    }
+    
+    #root > header > nav > ul {
+      width: 30vw;
+      height: inherit;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    #root > div > article > div:nth-child(1){
+      width: 2vw;
+      height: inherit;
+      background-color: blue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #root > div > article > div:nth-child(2){
+      width: 2vw;
+      height: inherit;
+      background-color: blue;
+      display: none;
+    }
+    #root > div > article > div:nth-child(3) > div:nth-child(1){
+      width: 13vw;
+      height: 5vh;
+      background-color: pink;
+    }
+    #root > div > article > div:nth-child(3) > div:nth-child(2){
+      width: 13vw;
+      height: 75vh;
+      background-color: salmon;
+    }
+
+    #root > div > main > div {
+      width: 50vw;
+      height: 50vh;
+      background-color: royalblue;
+      margin-bottom: 2vh;
+      display: flex;
+      align-items: flex-end;
+    }
+    #root > div > main > div > div:nth-child(1) {
+      width: 15vw;
+      height: 50vh;
+      background-color: aqua;
+    }
+    #root > div > main > div > div:nth-child(2) {
+      width: 30vw;
+      height: 30vh;
+      background-color: plum;
+      position: relative;
+      left: 2vw;
+    } */
+  </style>  
 </head>
 <body>
   <div id="root">
-    <header></header>
+    <!-- <header>
+      <nav>
+        <ul>
+          <li>shop</li>
+          <li>about</li>
+          <li>contact</li>
+          <li>account</li>
+          <li>search</li>
+          <li>bag</li>
+        </ul>
+      </nav>
+    </header>
     <div>
-      <main></main>
-      <article></article>
-    </div>
+      <main>
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </main>
+      <article>
+        <div>></div>
+        <div><</div>
+        <div>
+          <div>collection</div>
+          <div></div>
+        </div>
+      </article>
+    </div> -->
   </div>
 
 
 
   <script>
-    
+    const docInit = {
+      root: document.getElementById('root'),
+      header: document.createElement('header'),
+      containerdiv: document.createElement('div'),
+      nav: document.createElement('nav'),
+      ul: document.createElement('ul'),
+      liOne: document.createElement('li'),
+      liTwo: document.createElement('li'),
+      liThree: document.createElement('li'),
+      liFour: document.createElement('li'),
+      liFive: document.createElement('li'),
+      main: document.createElement('main'),
+      article: document.createElement('article'),
+      mainDivOne: document.createElement('div'),
+      mainDivImg: document.createElement('div'),
+      mainDivText: document.createElement('div'),
+      rightDiv: document.createElement('div'),
+      leftDiv: document.createElement('div'),
+      articleDiv: document.createElement('div'),
+      collectionDiv: document.createElement('div'),
+      myCollectionDiv: document.createElement('div')
+    }
+
+    // docInit.root.appendChild(docInit.header)
+    // docInit.root.appendChild(docInit.containerdiv)
+    // docInit.header.appendChild(docInit.nav)
+    // docInit.nav.appendChild(docInit.ul)
+    // docInit.ul.appendChild(docInit.liOne)
+    // docInit.ul.appendChild(docInit.liTwo)
+    // docInit.ul.appendChild(docInit.liThree)
+    // docInit.ul.appendChild(docInit.liFour)
+    // docInit.ul.appendChild(docInit.liFive)
+    // docInit.containerdiv.appendChild(docInit.main)
+    // docInit.containerdiv.appendChild(docInit.article)
+    // docInit.main.appendChild(docInit.mainDivOne)
+    // docInit.mainDivOne.appendChild(docInit.mainDivImg)
+    // docInit.mainDivOne.appendChild(docInit.mainDivText)
+    // docInit.article.appendChild(docInit.rightDiv)
+    // docInit.article.appendChild(docInit.leftDiv)
+    // docInit.article.appendChild(docInit.articleDiv)
+    // docInit.articleDiv.appendChild(docInit.collectionDiv)
+    // docInit.articleDiv.appendChild(docInit.myCollectionDiv)
   </script>
 </body>
 </html>
