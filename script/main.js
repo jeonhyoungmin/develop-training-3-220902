@@ -1,6 +1,7 @@
 import trainingData from "./trainingData.js";
 import bodyRoot from "./bodyRoot.js"
 import createTag from "./createTag.js"
+import liTag from "./liTag.js"
 
 bodyRoot()
 
@@ -27,12 +28,14 @@ createTag('nav', {
 }, header)
 createTag('ul', {
   id: 'ul',
-  width: 30vw;
-  height: inherit;
-  list-style-type: none;
-  display: flex;
-  justify-content: space-around;
-}, header)
+  width: '30vw',
+  height: 'inherit',
+  listStyleType: 'none',
+  display: 'flex',
+  justifyContent: 'space-around'
+}, nav)
+liTag()
+console.log(trainingData['header'][0])
 
 
 
