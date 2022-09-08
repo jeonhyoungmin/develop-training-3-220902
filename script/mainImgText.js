@@ -11,12 +11,12 @@ export default function mainImgText(propsImg, propsText, clampSize){
       imgContainer.style[cssValue] = propsImg[cssValue] 
     }
       imgContainer.style.backgroundImage = `url(${trainingData['thumnailData'][i]['imgSrc']})`
-      imgContainer.style.backgroundSize = 'cover'
+      imgContainer.style.backgroundSize = '15vw 50vh'
     // 텍스트 속성
     for(const cssValue in propsText){
       textContainer.style[cssValue] = propsText[cssValue]
     }
-      textContainer.style.overflowY = 'hidden'
+      textContainer.style.overflowY = 'scroll'
 
       textData.innerHTML = `
       <div style = 

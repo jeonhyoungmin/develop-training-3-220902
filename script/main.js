@@ -13,17 +13,19 @@ createTag('header', {
   id: 'header',
   width: '100vw',
   height: '80px',
-  backgroundColor: 'aqua',
+  // backgroundColor: 'aqua',
   position: 'fixed',
   zIndex: 1,
   display: 'flex',
-  alignItems: 'flex-end'
+  alignItems: 'flex-end',
+  backgroundColor: "rgb(200,200,200)"
 }, root)
 createTag('nav', {
   id: 'nav',
   width: '1300px',
   height: '50px',
-  backgroundColor: 'grey',
+  // backgroundColor: 'grey',
+  borderBottom: "1px solid black",
   position: 'relative',
   left: '3vw',
   display: 'flex',
@@ -51,7 +53,7 @@ createTag('div', {
   id: 'containerDiv',
   width: '100vw',
   height: (100 + 40*trainingData['thumnailData'].length) + 'vh',
-  backgroundColor: 'yellowgreen',
+  backgroundColor: 'rgb(200,200,200)',
   display: 'flex',
   justifyContent: 'flex-end',
   alignItems: 'flex-start'
@@ -60,7 +62,7 @@ createTag('main', {
   id: 'main',
   width: '60vw',
   height: '80vh',
-  backgroundColor: 'blue',
+  // backgroundColor: 'blue',
   position: 'relative',
   right: '25vw',
   top: '30vh'
@@ -69,21 +71,25 @@ createThumnail({
   id: 'thumnail',
   width: '50vw',
   height: '50vh',
-  backgroundColor: 'royalblue',
+  // backgroundColor: 'royalblue',
   marginBottom: '2vh',
   display: 'flex',
   alignItems: 'flex-end'
 })
 mainImgText({
   width: '15vw',
-  height: '50vh',
-  backgroundColor: 'aqua'
+  height: '40vh',
+  backgroundColor: 'rgb(200, 200, 200)'
+  // backgroundColor: 'aqua'
 }, {
   width: '30vw',
   height: '30vh',
-  backgroundColor: 'plum',
+  // backgroundColor: 'plum',
   position: 'relative',
-  left: '2vw'
+  left: '2vw',
+  display: 'flex',
+  alignItems: "center",
+  // backgroundColor: 'rgb(200, 200, 200)'
 }, 10)
 
 // ! article
@@ -91,7 +97,7 @@ createTag('article', {
   id: 'article',
   width: '15vw',
   height: '80vh',
-  backgroundColor: 'cadetblue',
+  // backgroundColor: 'cadetblue',
   position: 'fixed',
   bottom: '5vh',
   right: '8vw',
@@ -109,7 +115,7 @@ createTag('div', {
   id: 'collection',
   width: '13vw',
   height: '5vh',
-  backgroundColor: 'pink',
+  // backgroundColor: 'pink',
   fontFamily: 'Inter',
   fontStyle: 'normal',
   fontWeight: 400,
@@ -123,13 +129,13 @@ createTag('div', {
   id: 'myCollection',
   width: '13vw',
   height: '73vh',
-  backgroundColor: 'salmon',
+  // backgroundColor: 'salmon',
   overflow: 'hidden'
 }, collectionDiv)
 arrowSlide({
   width: '2vw',
   height: 'inherit',
-  backgroundColor: 'blue',
+  // backgroundColor: 'blue',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
