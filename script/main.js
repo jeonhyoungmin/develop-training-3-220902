@@ -18,8 +18,20 @@ createTag('header', {
   zIndex: 1,
   display: 'flex',
   alignItems: 'flex-end',
-  backgroundColor: "rgb(200,200,200)"
+  backgroundColor: trainingData.colorAssets[0]
 }, root)
+createTag('div', {
+  id: 'darkMode',
+  width: '50px',
+  height: '30px',
+  backgroundColor: trainingData.colorAssets[0],
+  color: trainingData.colorAssets[1],
+  position: 'absolute',
+  bottom: '20px',
+  left: '20px',
+  textAlign: 'center',
+  zIndex: 1
+}, header, "white")
 createTag('nav', {
   id: 'nav',
   width: '1300px',
@@ -52,8 +64,8 @@ liTag({
 createTag('div', {
   id: 'containerDiv',
   width: '100vw',
-  height: (100 + 40*trainingData['thumnailData'].length) + 'vh',
-  backgroundColor: 'rgb(200,200,200)',
+  height: (100 + 40 * trainingData['thumnailData'].length) + 'vh',
+  backgroundColor: trainingData.colorAssets[0],
   display: 'flex',
   justifyContent: 'flex-end',
   alignItems: 'flex-start'
@@ -79,7 +91,7 @@ createThumnail({
 mainImgText({
   width: '15vw',
   height: '40vh',
-  backgroundColor: 'rgb(200, 200, 200)'
+  // backgroundColor: 'rgb(200, 200, 200)'
   // backgroundColor: 'aqua'
 }, {
   width: '30vw',
@@ -121,10 +133,9 @@ createTag('div', {
   fontWeight: 400,
   fontSize: '1rem',
   lineHeight: '58px',
-  overflow: 'hidden'
-}, collectionDiv)
-const collection = document.getElementById('collection')
-collection.textContent = 'Collection'
+  overflow: 'hidden',
+  color: trainingData.colorAssets[1]
+}, collectionDiv, 'Collection')
 createTag('div', {
   id: 'myCollection',
   width: '13vw',
@@ -141,3 +152,105 @@ arrowSlide({
   alignItems: 'center',
   position: 'absolute'
 })
+
+for (let i = 0; i < trainingData.thumnailData.length; i++) {
+  let chooseCard = document.getElementById(`thumnail${i}`)
+  chooseCard.addEventListener('click', () => {
+    // console.log(chooseCard)
+    chooseCard.style.display = 'none'
+    // collectionCard.id = `collection ${i}`
+    let chooseImg = document.querySelector(`#thumnail${i} > div:nth-Child(1)`)
+    const myCollection = document.getElementById('myCollection')
+    myCollection.appendChild(chooseImg)
+    chooseImg.style.width = '5vw'
+    chooseImg.style.height = '5vw'
+    chooseImg.style.backgroundSize = 'cover'
+    chooseImg.style.marginBottom = '5px'
+
+
+    chooseImg.addEventListener('click', () => {
+      chooseCard.style.display = 'flex'
+      chooseCard.prepend(chooseImg)
+      chooseImg.style.width = '15vw'
+      chooseImg.style.height = '40vh'
+      chooseImg.style.backgroundSize = '15vw 40vh'
+    })
+  })
+}
+
+
+let count = 0;
+  const darkMode = document.getElementById('darkMode')
+  darkMode.addEventListener('click', () => {
+    if(count === 0){
+      count = 1
+      darkMode.textContent = "dark"
+      darkMode.style.color = "white"
+      darkMode.style.backgroundColor = "black"
+      darkMode.style.transition = '1s ease-in-out'
+      header.style.backgroundColor = 'black'
+      header.style.transition = '1s ease-in-out'
+      nav.style.borderBottom = "1px solid white"
+      nav.style.transition = '1s ease-in-out'
+      // collectionDiv.style.backgroundColor = 'black'
+      collection.style.color = 'white'
+      collection.style.transition = '1s ease-in-out'
+      containerDiv.style.backgroundColor = 'black'
+      containerDiv.style.transition = '1s ease-in-out'
+      right.style.color = 'white'
+      right.style.transition = '1s ease-in-out'
+      left.style.color = 'white'
+      left.style.transition = '1s ease-in-out'
+      for (let i = 0; i < trainingData['header'].length; i++) {
+        let li = document.getElementById(`li${i}`)
+        li.style.color = 'white'
+        li.style.transition = '1s ease-in-out'
+      }
+      for (let i = 0; i < trainingData['thumnailData'].length; i++) {
+        let title = document.getElementById(`title${i}`)
+        let author = document.getElementById(`author${i}`)
+        let summary = document.getElementById(`summary${i}`)
+        title.style.color = 'white'
+        summary.style.color = 'white'
+        author.style.color = 'white'
+        title.style.transition = '1s ease-in-out'
+        summary.style.transition = '1s ease-in-out'
+        author.style.transition = '1s ease-in-out'
+      }
+    } else {
+      count = 0 
+      darkMode.textContent = "white"
+      darkMode.style.color = trainingData.colorAssets[1]
+      darkMode.style.backgroundColor = trainingData.colorAssets[0]
+      darkMode.style.transition = '1s ease-in-out'
+      header.style.backgroundColor = trainingData.colorAssets[0]
+      header.style.transition = '1s ease-in-out'
+      nav.style.borderBottom = "1px solid black"
+      nav.style.transition = '1s ease-in-out'
+      // collectionDiv.style.backgroundColor = 'black'
+      collection.style.color = trainingData.colorAssets[1]
+      collection.style.transition = '1s ease-in-out'
+      containerDiv.style.backgroundColor = trainingData.colorAssets[0]
+      containerDiv.style.transition = '1s ease-in-out'
+      right.style.color = trainingData.colorAssets[1]
+      right.style.transition = '1s ease-in-out'
+      left.style.color = trainingData.colorAssets[1]
+      left.style.transition = '1s ease-in-out'
+      for (let i = 0; i < trainingData['header'].length; i++) {
+        let li = document.getElementById(`li${i}`)
+        li.style.color = trainingData.colorAssets[1]
+        li.style.transition = '1s ease-in-out'
+      }
+      for (let i = 0; i < trainingData['thumnailData'].length; i++) {
+        let title = document.getElementById(`title${i}`)
+        let author = document.getElementById(`author${i}`)
+        let summary = document.getElementById(`summary${i}`)
+        title.style.color = trainingData.colorAssets[1]
+        summary.style.color = trainingData.colorAssets[1]
+        author.style.color = trainingData.colorAssets[1]
+        title.style.transition = '1s ease-in-out'
+        summary.style.transition = '1s ease-in-out'
+        author.style.transition = '1s ease-in-out'
+      }
+    }
+  })

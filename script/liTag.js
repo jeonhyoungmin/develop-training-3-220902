@@ -6,6 +6,7 @@ export default function liTag(props){
     container.textContent = trainingData['header'][i]
     for(const cssValue in props){
       container.style[cssValue] = props[cssValue]
+      container.id = `li${i}`
     }
     ul.appendChild(container)
   }

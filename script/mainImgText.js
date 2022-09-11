@@ -11,7 +11,7 @@ export default function mainImgText(propsImg, propsText, clampSize){
       imgContainer.style[cssValue] = propsImg[cssValue] 
     }
       imgContainer.style.backgroundImage = `url(${trainingData['thumnailData'][i]['imgSrc']})`
-      imgContainer.style.backgroundSize = '15vw 50vh'
+      imgContainer.style.backgroundSize = '15vw 40vh'
     // 텍스트 속성
     for(const cssValue in propsText){
       textContainer.style[cssValue] = propsText[cssValue]
@@ -19,7 +19,8 @@ export default function mainImgText(propsImg, propsText, clampSize){
       textContainer.style.overflowY = 'scroll'
 
       textData.innerHTML = `
-      <div style = 
+      <div id="title${i}"
+      style = 
       "font-family: 'Inter';
       font-style: normal;
       font-weight: 400;
@@ -28,7 +29,8 @@ export default function mainImgText(propsImg, propsText, clampSize){
       margin-bottom: 1vh;
       color: ${trainingData['colorAssets'][1]};">${trainingData['thumnailData'][i]['title']}</div>
 
-      <div style = 
+      <div id="author${i}"
+      style = 
       "font-family: 'Inter';
       font-style: normal;
       font-weight: 400;
@@ -36,10 +38,11 @@ export default function mainImgText(propsImg, propsText, clampSize){
       line-height: 15px;
       text-align: justify;
       margin-bottom: 1vh;
-      color: #000000;"> - ${trainingData['thumnailData'][i]['author']}</div>
+      color: ${trainingData['colorAssets'][1]};"> - ${trainingData['thumnailData'][i]['author']}</div>
 
 
-      <div style =
+      <div id="summary${i}"
+      style =
       "font-family: 'Inter';
       font-style: normal;
       font-weight: 400;
@@ -49,8 +52,7 @@ export default function mainImgText(propsImg, propsText, clampSize){
       display: -webkit-box;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: ${clampSize};
-      overflow: hidden;
-      color: #000000;"> - ${trainingData['thumnailData'][i]['summary']}</div>`
+      color: ${trainingData['colorAssets'][1]};"> - ${trainingData['thumnailData'][i]['summary']}</div>`
     thumnail.appendChild(imgContainer)
     thumnail.appendChild(textContainer)
     textContainer.appendChild(textData)

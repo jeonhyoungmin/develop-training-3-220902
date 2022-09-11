@@ -9,6 +9,8 @@ export default function arrowSlide(props){
   for(const cssValue in props){
     rightContainer.style[cssValue] = props[cssValue]
     leftContainer.style[cssValue] = props[cssValue]
+    rightContainer.id = 'right'
+    leftContainer.id = 'left'
   }
   article.appendChild(rightContainer)
   article.appendChild(leftContainer)

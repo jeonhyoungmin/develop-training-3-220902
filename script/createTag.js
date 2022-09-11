@@ -1,4 +1,4 @@
-export default function createTag(tagName, props, parent){
+export default function createTag(tagName, props, parent, textContent = ''){
   let container = document.createElement(tagName);
   for(const cssValue in props){
     if(cssValue === 'id'){
@@ -7,6 +7,7 @@ export default function createTag(tagName, props, parent){
       container.style[cssValue] = props[cssValue]
     }
   }
-  parent.appendChild(container)
   // return container
+  container.textContent = textContent
+  return parent.appendChild(container)
 }

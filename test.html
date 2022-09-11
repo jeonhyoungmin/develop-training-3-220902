@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* #root > div {
+      width: 30vw;
+      height: 30vw;
+      background-color: greenyellow;
+      overflow-y: scroll;
+    } */
+
+    ::-webkit-scrollbar {
+      width: 1vw;
+    }
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: black;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <!-- <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quod quas porro blanditiis! Soluta mollitia, nobis asperiores totam assumenda minima incidunt et eveniet. Consectetur recusandae voluptas modi, sint qui labore.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quod quas porro blanditiis! Soluta mollitia, nobis asperiores totam assumenda minima incidunt et eveniet. Consectetur recusandae voluptas modi, sint qui labore.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quod quas porro blanditiis! Soluta mollitia, nobis asperiores totam assumenda minima incidunt et eveniet. Consectetur recusandae voluptas modi, sint qui labore.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quod quas porro blanditiis! Soluta mollitia, nobis asperiores totam assumenda minima incidunt et eveniet. Consectetur recusandae voluptas modi, sint qui labore.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quod quas porro blanditiis! Soluta mollitia, nobis asperiores totam assumenda minima incidunt et eveniet. Consectetur recusandae voluptas modi, sint qui labore.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quod quas porro blanditiis! Soluta mollitia, nobis asperiores totam assumenda minima incidunt et eveniet. Consectetur recusandae voluptas modi, sint qui labore.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quod quas porro blanditiis! Soluta mollitia, nobis asperiores totam assumenda minima incidunt et eveniet. Consectetur recusandae voluptas modi, sint qui labore.
+    </div> -->
+  </div>
+
+  <script>
+    const root = document.getElementById('root')
+    root.style.width = '100vw'
+    root.style.height = '100vh'
+    root.style.backgroundColor = 'aqua'
+    const scrollBox = document.createElement('div')
+    root.appendChild(scrollBox)
+    scrollBox.style.width = "30vw";
+    scrollBox.style.height = "30vw";
+    scrollBox.style.backgroundColor = 'greenYellow'
+    scrollBox.style.overflowY = 'scroll'
+    scrollBox.textContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quod quas porro blanditiis! Soluta mollitia, nobis asperiores totam assumenda minima incidunt et eveniet. Consectetur recusandae voluptas modi, sint qui labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quod quas porro blanditiis! Soluta mollitia, nobis asperiores totam assumenda minima incidunt et eveniet. Consectetur recusandae voluptas modi, sint qui labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quod quas porro blanditiis! Soluta mollitia, nobis asperiores totam assumenda minima incidunt et eveniet. Consectetur recusandae voluptas modi, sint qui labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quod quas porro blanditiis! Soluta mollitia, nobis asperiores totam assumenda minima incidunt et eveniet. Consectetur recusandae voluptas modi, sint qui labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quod quas porro blanditiis! Soluta mollitia, nobis asperiores totam assumenda minima incidunt et eveniet. Consectetur recusandae voluptas modi, sint qui labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quod quas porro blanditiis! Soluta mollitia, nobis asperiores totam assumenda minima incidunt et eveniet. Consectetur recusandae voluptas modi, sint qui labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quod quas porro blanditiis! Soluta mollitia, nobis asperiores totam assumenda minima incidunt et eveniet. Consectetur recusandae voluptas modi, sint qui labore.'
+    console.dir(root.children[0])
+    
+  </script>
+</body>
+</html>
